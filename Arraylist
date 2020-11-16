@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ArrayLists {
+
+	public static void main(String[] args) {
+		
+		int average=0;
+		int sum=0;
+		System.out.println("No of students : 10");
+		int n=10;
+		ArrayList<Integer> marks = new ArrayList<Integer>(n);
+		System.out.println("enter the marks");
+		Scanner values = new Scanner(System.in);
+	
+		for(int i=0;i<n;i++) {
+			int j=values.nextInt();
+			marks.add(j);	
+		}
+		
+		System.out.println("marks of the students are "+marks);
+		marks.clone();
+		System.out.println(marks);
+		System.out.println(marks.contains(9));
+		System.out.println(marks.get(4));
+		marks.set(4,79);
+		marks.set(7, 89);
+		System.out.println(marks);
+		marks.remove(7);
+		System.out.println(marks);
+		for(int k : marks) {
+		
+			sum+=k;
+		}
+		System.out.println("the total marks is "+ sum);
+		average=sum/n;
+		System.out.println("average is "+average);
+		for(int i: marks) {
+			
+			if(i>=75) {
+				
+				System.out.println(i +" 1st class");
+			}
+		}
+	}
+	
+	
+	}
+
