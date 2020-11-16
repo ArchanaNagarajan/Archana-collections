@@ -1,0 +1,58 @@
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class LinkedLists {
+
+	public static void main(String[] args) {
+		
+		int sum=0;
+		int average=0;
+		String value;
+		System.out.println("enter the no of students");
+		Scanner number = new Scanner(System.in);
+		int n= number.nextInt();
+		LinkedList<Integer> marks = new LinkedList<Integer>();
+		System.out.println("enter the marks");
+		Scanner values = new Scanner(System.in);
+	
+		for(int i=0;i<n;i++) {
+			int j=values.nextInt();
+			marks.add(j);	
+		}
+		
+		System.out.println("marks of the students are "+marks);
+		marks.addFirst(22);
+		marks.addLast(43);
+		System.out.println(marks);
+	
+		for(int k : marks) {
+		      sum+=k;
+			}
+			System.out.println("the total marks is "+ sum);
+			average=sum/n;
+			System.out.println("average is "+average);
+			for(int i: marks) {
+				
+		    if(i>=75) {
+						
+			  System.out.println(i +" 1st class");
+			}
+	}
+		
+			Collections.sort(marks);
+			System.out.println(marks);
+			Collections.reverse(marks);
+		     System.out.println(marks);
+			
+			System.out.println(marks.peekFirst());
+			System.out.println(marks.peekLast());
+			System.out.println(marks.pollFirst());
+			System.out.println(marks);
+			System.out.println(marks.remove(0));
+			System.out.println(marks);
+			System.out.println(marks.peek());
+			
+			
+	}
+}
