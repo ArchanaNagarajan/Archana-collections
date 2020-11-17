@@ -1,0 +1,45 @@
+import java.util.Iterator;
+import java.util.PriorityQueue;
+import java.util.Scanner;
+
+
+public class Priorityqueues{
+	
+	public static void main(String args[]){  
+        PriorityQueue<String> states_queue=new PriorityQueue<String>();  
+        
+        states_queue.add("Tamilnadu");  
+        states_queue.add("kerala");  
+        states_queue.add("Andhra");  
+        states_queue.add("karnataka");  
+        states_queue.add("Goa");  
+        states_queue.add("Madhyapradesh");
+        states_queue.add("Assam");
+        
+        System.out.println("PriorityQueue Head:"+states_queue.element());  
+         
+        System.out.println("\nPriorityQueue contents:");  
+        Iterator iter=states_queue.iterator();  
+        while(iter.hasNext()){ 
+            System.out.print(iter.next() + " ");  
+        }  
+        
+    	 PriorityQueue<Integer> people =new PriorityQueue<Integer>();  
+    	System.out.println("\n enter the no of people");
+    	Scanner values = new Scanner(System.in);
+
+    	for(int i=0;i<7;i++) {
+    		int j=values.nextInt();
+    		people.add(j);	
+    	}
+    	
+    	System.out.println(people);
+
+    	Iterator state=states_queue.iterator(); 
+    	Iterator person = people.iterator();
+        while((state.hasNext())&& ( person.hasNext())){ 
+            System.out.print("\n" + state.next() + " "+person.next());  
+        }  
+    	
+    }  
+}  
