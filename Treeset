@@ -1,0 +1,64 @@
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.Scanner;
+import java.util.TreeSet;
+
+public class Treesetss {  
+public static void main(String[] args) {  
+   
+	int sum=0;
+	int average=0;
+	String value = null;
+    System.out.println("enter the no of employee");
+	Scanner number = new Scanner(System.in);
+	int n= number.nextInt();
+	 TreeSet<Integer> salary =new TreeSet<Integer>();  
+	System.out.println("enter the salary");
+	Scanner values = new Scanner(System.in);
+
+	for(int i=0;i<n;i++) {
+		int j=values.nextInt();
+		salary.add(j);	
+	}
+	
+	System.out.println("salary of the employee are "+salary);
+	
+
+	for(int k : salary) {
+	      sum+=k;
+		}
+		System.out.println("the total marks is "+ sum);
+		average=sum/n;
+		System.out.println("average is "+average);
+		
+	  
+		TreeSet<String> EmpNames = new TreeSet<String>();
+		System.out.println("enter the names");
+		Scanner names_emp = new Scanner(System.in);
+		
+		for(int i=0;i<n;i++) {
+			value = names_emp.next();
+			EmpNames.add(value);
+		}
+		System.out.println(EmpNames);
+		
+		/*System.out.println("Subset : " + salary.subSet(20000, 50000));
+		System.out.println("Headset : "+ salary.headSet(10000));
+		System.out.println("Tailset : "+ salary.tailSet(60000));
+		System.out.println(salary.subSet(20000, true , 30000, false));
+		System.out.println(salary.higher(20000));*/
+		 Iterator i=salary.descendingIterator();  
+         while(i.hasNext())  
+         {  
+             System.out.println(i.next());  
+         }  
+         System.out.println(salary.remove(2000));
+     		System.out.println(salary.first());
+     		System.out.println(salary.last());
+     		System.out.println(salary.pollFirst());
+     		System.out.println(salary.pollLast());
+     		System.out.println(salary);
+}
+
+   
+}  
