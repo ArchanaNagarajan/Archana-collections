@@ -1,0 +1,27 @@
+import java.util.ArrayDeque;
+
+public class PriorityDequeues {
+
+	public static void main(String[] args) {
+		  
+		       String value;
+			   ArrayDeque<String> deque = new ArrayDeque<String>(); 
+			  
+			   deque.add("CSE");    
+			   deque.add("ECE");     
+			   deque.add("IT");
+			   deque.add("MECHANICAL");
+			   deque.offer("CIVIL");
+			   for(String str : deque) {
+            	   System.out.println(str);
+			    }
+			    System.out.println();
+			   // deque.poll();
+			    deque.pollFirst();
+			    deque.pollLast();
+               for(String str : deque) {
+            	   System.out.println(str);
+			    }
+			   }  
+
+	}
