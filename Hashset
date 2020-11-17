@@ -1,0 +1,59 @@
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class HashSetDemo {
+
+	public static void main(String[] args) {
+		
+		int sum=0;
+		int average=0;
+		String value = null;
+		System.out.println("enter the no of students");
+		Scanner number = new Scanner(System.in);
+		int n= number.nextInt();
+		HashSet<Integer> marks = new HashSet<Integer>();
+		System.out.println("enter the marks");
+		Scanner values = new Scanner(System.in);
+	
+		for(int i=0;i<n;i++) {
+			int j=values.nextInt();
+			marks.add(j);	
+		}
+		
+		System.out.println("marks of the students are "+marks);
+        
+		//Collections.sort(marks);not applicable
+		System.out.println(marks.contains(9));
+		//System.out.println(marks.get(4));
+		//marks.set(4,79);
+		marks.remove(7);
+		System.out.println(marks);
+		
+		System.out.println("enter the no of students");
+		Scanner numbers = new Scanner(System.in);
+		int num= numbers.nextInt();
+		HashSet<Integer> markOfStudent = new HashSet<Integer>();
+		System.out.println("enter the marks");
+		Scanner mark = new Scanner(System.in);
+	
+		for(int i=0;i<n;i++) {
+			int j=mark.nextInt();
+			markOfStudent.add(j);	
+		}
+		
+		System.out.println("marks of the students are "+markOfStudent);
+		boolean compare = marks.equals(markOfStudent);
+		System.out.println(compare);
+		markOfStudent.removeAll(marks);
+		System.out.println("not common values "+ markOfStudent);
+		markOfStudent.retainAll(marks);
+		System.out.println(" common values "+ markOfStudent);
+		Iterator<Integer> Traverse = marks.iterator();
+		while(Traverse.hasNext()) {
+			System.out.println(Traverse.next());
+		}
+	}
+
+}
