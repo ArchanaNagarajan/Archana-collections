@@ -1,0 +1,32 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class HashMaps {
+
+	public static void main(String[] args) {
+		
+		HashMap<Integer,String> country = new HashMap<Integer,String>();
+		country.put(80004990," India ");
+		country.put(43900070,"HongKong");
+		country.put(32789500, "Australia");
+		country.put(78900400,"America");
+		country.put(56960800,"Dubai");
+		country.put(23480890,"Pakistan");
+		country.put(21335780,"Thailand");
+		
+    for(Map.Entry m : country.entrySet()){    
+    	
+         System.out.println(m.getKey()+" "+m.getValue()); 
+         
+	  }  
+    country.remove("Dubai");
+    System.out.println(country);
+    
+    String value = country.get(78900400);
+    System.out.println("North "+ value);	
+
+	}
+
+}
