@@ -1,0 +1,40 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+public class Iteratorss {
+
+	public static void main(String[] args) {
+		
+		LinkedList<String> numbers = new LinkedList<String>();
+		System.out.println("the blood groups are :");
+		numbers.add("A");
+		numbers.add("B");
+		numbers.add("O");
+		numbers.add("AB");
+		
+		Iterator<String> values = numbers.iterator();
+		while(values.hasNext()) {
+			String number = values.next();
+			System.out.println(number);
+		}
+		ListIterator<String>section =numbers.listIterator() ;
+		while(section.hasNext()) {			
+			String value = section.next();
+			section.set(value + " +\n " + value + " - ");
+			
+		}
+
+		values=numbers.iterator();
+		while(values.hasNext()) {
+			String number = values.next();
+			System.out.println(number);
+		}
+		System.out.println("reverse order");
+		while(section.hasPrevious()) {
+			String number = section.previous();
+			System.out.println(number);
+		}
+		}
+
+}
