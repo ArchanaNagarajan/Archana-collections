@@ -1,0 +1,32 @@
+import java.util.TreeMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class TreeMaps {
+
+	public static void main(String[] args) {
+		
+		TreeMap<Integer,String> country = new TreeMap<Integer,String>();
+		country.put(80004990," India ");
+		country.put(43900070,"HongKong");
+		country.put(32789500, "Australia");
+		country.put(78900400,"America");
+		country.put(56960800,"Dubai");
+		country.put(23480890,"Pakistan");
+		country.put(21335780,"Thailand");
+		
+    for(Map.Entry m : country.entrySet()){    
+    	
+         System.out.println(m.getKey()+" "+m.getValue()); 
+         
+	  }
+    country.pollFirstEntry();
+    country.pollLastEntry();
+    System.out.println(country);
+    System.out.println( country.firstEntry());
+    System.out.println();
+   System.out.println(country.ceilingEntry(56900000));
+ 
+	}
+}
