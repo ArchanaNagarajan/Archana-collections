@@ -1,0 +1,40 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+import java.util.Spliterator;
+
+public class Spilterators{
+
+	public static void main(String[] args) {
+		
+		System.out.println("Enter the number of students");
+		Scanner num = new Scanner(System.in);
+		int value = num.nextInt();
+		ArrayList<Integer> marks = new ArrayList<Integer>();
+		System.out.println("enter the marks");
+		Scanner values = new Scanner(System.in);
+	
+		for(int i=0;i<value;i++) {
+			int j=values.nextInt();
+			marks.add(j);	
+		}
+		
+		System.out.println("marks of the students are "+marks);
+
+		Spliterator<Integer> spliterator = marks.spliterator();
+		 
+		System.out.println(spliterator.estimateSize());
+		System.out.println(spliterator.getExactSizeIfKnown());
+		
+		Spliterator<Integer> spliterator1 = marks.spliterator();
+		Spliterator<Integer> spliterator2 = spliterator1.trySplit();
+		 
+		spliterator1.forEachRemaining(System.out::println);
+		 
+		System.out.println("========");
+		 
+		spliterator2.forEachRemaining(System.out::println);
+		
+	}
+
+}
