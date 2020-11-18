@@ -1,0 +1,46 @@
+import java.util.Collections;
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Stacks {
+
+public static void main(String[] args) {
+		
+		System.out.println("enter the no of employee");
+		Scanner number = new Scanner(System.in);
+		int n= number.nextInt();
+		 Stack<Integer> salary =new Stack<Integer>();  
+		System.out.println("enter the salary");
+		Scanner values = new Scanner(System.in);
+
+		for(int i=0;i<n;i++) {
+			int j=values.nextInt();
+			salary.push(j);	
+		}
+
+		System.out.println(salary.capacity());
+		System.out.println("salary of the employee are "+salary);
+        System.out.println(salary.pop());
+        System.out.println(salary.peek());
+        System.out.println(salary);
+		System.out.println();
+		
+		 Stack<Integer> id =new Stack<Integer>();  
+			System.out.println("enter the id");
+			Scanner num = new Scanner(System.in);
+
+			for(int i=0;i<n;i++) {
+				int j=num.nextInt();
+				id.push(j);	
+			}
+
+			System.out.println("ID : "+ id);
+			boolean compare = salary.equals(id);
+			System.out.println(compare);
+			Collections.sort(salary);
+			System.out.println(salary);
+			Collections.reverse(salary);
+			System.out.println(salary);
+			
+	}
+}
