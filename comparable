@@ -1,0 +1,58 @@
+import java.util.Scanner;
+import java.util.Queue;
+import java.util.PriorityQueue;
+
+class Company implements Comparable<Company>{  
+int id;  
+String name;  
+ 
+public Company() {  
+    this.id = id;  
+    this.name = name;  
+    
+}  
+void display() {
+	
+	System.out.println("enter the Id");
+	Scanner values = new Scanner(System.in);
+	 id = values.nextInt();
+	System.out.println("enter the name");
+	Scanner names = new Scanner(System.in);
+	name = names.next();
+
+}
+public int compareTo(Company com) {  
+    if(id>com.id){  
+        return 1;  
+    }else if(id<com.id){  
+        return -1;  
+    }else{  
+    return 0;  
+    }  
+}  
+}  
+public class LinkedListExample {  
+public static void main(String[] args) {  
+    Queue<Company> queue=new PriorityQueue<Company>();  
+   
+    Company object1 = new Company();
+    object1.display();
+
+    Company object2 = new Company();
+    object2.display();
+
+    Company object3 = new Company();
+    object3.display();
+    
+    queue.add(object1);  
+    queue.add(object2);  
+    queue.add(object3);  
+    
+    for(Company com : queue) {
+    	
+    	System.out.println("Id : "+ com.id+" Name : "+com.name);
+    }
+   int value = object1.compareTo(object3);
+   System.out.println(value);
+}  
+}  
