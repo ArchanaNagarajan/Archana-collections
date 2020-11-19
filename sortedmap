@@ -1,0 +1,31 @@
+import java.util.Map;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+public class Sortedmaps {
+
+public static void main(String[] args) {
+		
+		SortedMap<Integer,String> country = new TreeMap<Integer,String>();
+		country.put(80004990," India ");
+		country.put(43900070,"HongKong");
+		country.put(32789500,"Australia");
+		country.put(78900400,"America");
+		country.put(56960800,"Dubai");
+		country.put(23480890,"Pakistan");
+		country.put(21335780,"Thailand");
+		
+    for(Map.Entry m : country.entrySet()){    
+    	
+         System.out.println(m.getKey()+" "+m.getValue()); 
+         
+	  }
+   country.remove(80004990);
+    System.out.println(country);
+   System.out.println( country.values());
+   System.out.println(country.tailMap(70000000));
+   System.out.println(country.headMap(40000000));
+ 
+	}
+
+}
