@@ -1,0 +1,54 @@
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+public class ListAndSet {
+
+	public static void main(String[] args) {
+		
+		System.out.println("enter the no of students");
+		Scanner number = new Scanner(System.in);
+		int n= number.nextInt();
+		HashSet<Integer> marks = new HashSet<Integer>();
+		System.out.println("enter the marks");
+		Scanner values = new Scanner(System.in);
+	
+		for(int i=0;i<n;i++) {
+			int j=values.nextInt();
+			marks.add(j);	
+		}
+		
+		System.out.println("marks of the students are "+marks);
+		System.out.println();
+		LinkedList<Integer> Id = new LinkedList<Integer>();
+		System.out.println("enter the Id");
+		Scanner numbers = new Scanner(System.in);
+	
+		for(int i=0;i<n;i++) {
+			int j=numbers.nextInt();
+			Id.add(j);	
+		}
+		
+		System.out.println("marks of the students are "+Id);
+		System.out.println();
+		System.out.println("Enter the no of staffs");
+		Scanner noOf = new Scanner(System.in);
+		int num = noOf.nextInt();
+		TreeMap<Integer,String> Staff = new TreeMap<Integer,String>();
+		System.out.println("enter the staff id");
+		Scanner Id_staff = new Scanner(System.in);
+		System.out.println("enter the Staff name");
+		Scanner names = new Scanner(System.in);
+	
+		for(int i=0;i<num;i++) {
+			int j=Id_staff.nextInt();
+			 String staffName = names.next();
+			Staff.put(j,staffName);	
+		}
+		
+		System.out.println("staff list "+Staff);
+
+	}
+
+}
