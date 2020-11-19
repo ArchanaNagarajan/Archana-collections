@@ -1,0 +1,41 @@
+
+import java.util.Collections;
+import java.util.Scanner;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+public class SortedSetss {
+
+	public static void main(String[] args) {
+
+		SortedSet employee = new TreeSet();
+		 System.out.println("enter the no of employee");
+			Scanner number = new Scanner(System.in);
+			int n= number.nextInt();
+			System.out.println("enter the salary");
+			Scanner values = new Scanner(System.in);
+			
+			for(int i=0;i<n;i++) {
+				int j=values.nextInt();
+				employee.add(j);	
+			}
+			
+			System.out.println("salary of the employee are "+employee);
+			
+			SortedSet Name = new TreeSet();
+			System.out.println("enter the name");
+			Scanner names = new Scanner(System.in);
+			for(int i=0;i<n;i++) {
+			String nameOf = names.next();
+			Name.add(nameOf);
+			}
+			System.out.println("name of the employee are " + Name);
+           System.out.println(employee.first());
+           System.out.println(employee.last());
+           System.out.println(employee.headSet(5000));
+           System.out.println(employee.tailSet(10000));
+           System.out.println(employee.subSet(6000, 8000));
+           System.out.println(employee.equals(Name));
+	}
+
+}
