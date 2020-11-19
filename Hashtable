@@ -1,0 +1,34 @@
+import java.util.Collections;
+import java.util.Hashtable;
+import java.util.Scanner;
+
+public class HashTabless {
+
+public static void main(String[] args) {
+		
+		int sum=0;
+		int average=0;
+		String value = null;
+		System.out.println("enter the no of students");
+		Scanner number = new Scanner(System.in);
+		int n= number.nextInt();
+		Hashtable<String,Integer> marks = new Hashtable<String,Integer>();
+		System.out.println("enter the marks");
+		Scanner values = new Scanner(System.in);
+		System.out.println("enter the name");
+		Scanner names = new Scanner(System.in);
+	
+		for(int i=0;i<n;i++) {
+			int j=values.nextInt();
+			 value = names.next();
+			marks.put(value,j);	
+		}
+		
+		System.out.println("students list "+marks);
+		System.out.println(marks.putIfAbsent("arch", 345));
+		System.out.println(marks.replace("arav", 45, 79));
+		System.out.println();
+		System.out.println(marks);
+		
+}  
+}
