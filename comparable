@@ -31,7 +31,7 @@ public int compareTo(Company com) {
     }  
 }  
 }  
-public class LinkedListExample {  
+public class Example {  
 public static void main(String[] args) {  
     Queue<Company> queue=new PriorityQueue<Company>();  
    
